@@ -1,0 +1,49 @@
+.button {
+         border:  solid 1.5px white;
+         padding: 3px;
+         font-size: 16px;
+         margin: 5px;
+}
+
+#signup{
+	margin-top: 20px;
+	text-align: center;
+}
+
+#frm{
+  margin: 0 auto;
+  text-align: left;
+}
+
+#content{
+  width: 100%;
+  text-align: center;
+
+}
+#cname{
+  background-color: #008AFC;
+  color: white;
+}
+
+body{
+  margin:0;
+  width: 100%
+  border:0;
+  text-align: center;
+}
+
+#login{
+  text-align: center;
+  margin: 5px auto;
+}
+
+body {
+  min-height: 0;
+}
+
+#content {
+  min-height: calc(100vh - 30px);
+  margin: 0 auto;
+  padding: 0;
+  border:0;
+}

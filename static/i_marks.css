@@ -1,0 +1,23 @@
+.new_mark{
+	width: 60%;
+	border: solid 5px #8fc9d9;
+	margin-bottom: 40px;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+.fill{
+	width: 70%;
+}
+
+
+.f_button{
+	width: 15%;
+	height: 20%;
+	margin: 3%;
+	background-color: #008AFC;
+}
+
+label{
+	font-size: 20px;
+}

@@ -1,0 +1,269 @@
+body{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+footer{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+h1{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-align: center;
+	font-size: 32px;
+}
+
+h2{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 28px;
+	text-align: center;
+}
+
+h3{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 20px;
+}
+
+h4{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 24px;	
+	line-height: 80%
+}
+
+p{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 18px;
+}
+
+#content{
+ 	width:80%;
+ 	margin: auto;
+ 	display: flex;
+	flex-direction: column;
+	align-content: space-around;
+ }
+
+/*hyperlink*/
+/* unvisited link */
+a:link {
+  color: blue;
+}
+
+/* visited link */
+a:visited {
+  color: purple;
+}
+
+a:hover, a:active{
+	color:green;
+	transition-delay: 20ms;
+}
+
+/*header*/
+#header{
+	width:100%;
+	background-color: #008AFC;
+	color: white;
+	position: sticky;
+	top: 0;
+}
+
+#cname{
+	padding-top: 20px;
+	margin-bottom: 5px;
+}
+
+/*nav bar*/
+#navBar{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.button {
+         border:  solid 3px white;
+         background-color: #008AFC;
+         color: white;
+         padding: 5px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 20px;
+         cursor: pointer;
+         margin:10px;
+         margin-bottom: 30px;
+         }
+
+a.button{
+	color:white;
+}
+
+a.button:hover{
+	background-color: rgba(0,54,99,0.3);
+}
+
+#pname{
+	color: black;
+	width: 50%;
+	text-align: center;
+	margin: auto;
+	border-bottom: 2px solid black;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	font-size: 24px;
+}
+
+#cname{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#logout{
+	background: white;
+	color: #008AFC;
+	border: 0;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#LOGOUT{
+	position: absolute;
+  	right: 0px;
+}
+
+#c{
+	margin: auto;
+}
+
+/*footer*/
+body {
+  min-height: calc(100vh - 70px);
+  margin: 0;
+  padding: 0;
+  border:0;
+}
+
+#footer {
+  height: 30px;
+  justify-content: space-between;
+  background-color: #008AFC ;
+  color:white;
+  text-align: center;
+  padding: 40px;
+}
+
+a.linkToFaculty{
+	color:white;
+}
+
+a.linkToFaculty:hover{
+	color: black;
+}
+
+/*flexbox of lectures*/
+.flex-container {
+  display: flex;
+  direction: row;
+  flex-wrap: wrap;
+  text-overflow: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+
+}
+.child{
+  width: 45%;
+	border: solid 5px #8fc9d9;
+	padding: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+/*Added by Yuhong Shao*/ 
+ #lfile {
+	font-size: 15px;
+	border-radius: 20px;
+	margin:0;
+	font-weight: bold;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+/*Added by Te Hou*/
+ .f{
+	border-radius: 10px;
+	font-size: 20px;
+	padding: 10px;
+}
+
+/*forms*/
+textarea, input, option{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	border-radius: 10px;
+	padding: 5px;
+	font-size: 16px;
+	width: 100%;
+	background-color: #8fc9d9;
+}
+
+option{
+	background-color: white;
+}
+
+form{
+	margin-left: 25%;
+	margin-right: 10%;
+	width: 100%;
+  	margin: 0 auto;
+	vertical-align: top;
+}
+
+textarea:hover {
+	background-color: rgba(56,79,85,0.3);
+}
+
+input:hover {
+	background-color: rgba(56,79,85,0.3);
+}
+
+option:hover{
+	background-color: rgba(56,79,85,0.3);
+}
+
+/*Alert Message*/
+.message{
+	text-align: center;
+	color:#008AFC;
+	font-size: 22px;
+}
+
+/*Flexible table display*/
+.flextable{
+	display: flex;
+	width:100%;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 40px;
+	margin-top: 20px;
+}
+.row{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%
+}
+.column{
+	width: 25%;
+	border: 1px black solid;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.h{
+	padding-bottom:5px;
+	padding-top:5px;
+	font-weight: bold;
+}
+

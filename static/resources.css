@@ -1,0 +1,15 @@
+.block {
+	width: 30%;
+	border: solid 5px #8fc9d9;
+	padding-right: 20px;
+	padding-left: 20px;
+	margin-bottom: 30px;
+}
+
+#blocks {
+	display: flex;
+	direction: row;
+	flex-wrap: wrap;
+	text-overflow: wrap;
+	justify-content: center;
+}

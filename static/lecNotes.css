@@ -1,0 +1,22 @@
+/*Content*/
+
+ul{
+  list-style: none;
+}
+
+.week{
+  font-size: 16px;
+  border-radius: 10px;
+  margin:0;
+  font-weight: bold;
+}
+
+p{
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  .child {
+    width: 100%;
+  }
+}

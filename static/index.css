@@ -1,0 +1,83 @@
+/*Specific*/
+li{
+	font-size: 18px;
+	list-style-type: none;
+}
+ 
+/*course*/
+#c2{
+	margin-left: 5%;
+	line-height: 90%
+}
+
+#syllabus{
+	border-radius: 10px;
+	padding: 10px;
+	font-size: 18px;
+	margin-left: -5px;
+}
+/*course team*/
+#cteam{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+img{
+	display: block;
+  	margin-left: auto;
+	margin-right: auto;
+ 	width: 60%;
+}
+
+.profilePhoto{
+	border:solid 5px #8fc9d9;
+	border-bottom: solid 2.5px #8fc9d9;
+}
+
+.profileInfo{
+	border:solid 5px #8fc9d9;
+	border-top: solid 2.5px #8fc9d9;
+	padding-right: 25px;
+}
+
+/*news*/
+#news{
+	display: flex;
+	flex-direction: column;
+}
+
+.post{
+	display: flex;
+	flex-direction: row;
+	align-content: space-around;
+	margin: 15px;
+	border:solid 5px #8fc9d9;
+	position: relative;
+	border-radius: 25px;
+}
+
+.postIcon {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 40px solid #008AFC;
+    border-bottom: 20px solid transparent;
+  	margin: 0;
+  	position: absolute;
+  	top: 50%;
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
+  	margin-left: 20px;
+    }
+
+.postText{
+	margin-left: 100px;
+	padding-top:10px;
+
+}
+h5{
+	font-size:24px;
+	margin: 0;
+	font-weight: bold;
+}

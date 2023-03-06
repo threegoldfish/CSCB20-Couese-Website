@@ -1,0 +1,19 @@
+textarea[type=text] {
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	padding: 10px 10px; 
+	line-height: 10px;
+	width: 100%;
+	text-align: left;
+
+}
+
+.f_button{
+	width: 40%;
+	height: 20%;
+	margin: 3%
+	
+}
+
+

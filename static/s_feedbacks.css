@@ -1,0 +1,69 @@
+#fb{
+	margin:auto;
+	width:90%;
+	margin:0 auto;
+}
+
+label{
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.fb{
+	height: 100px;
+	width:80%;
+	vertical-align: top;
+	background-color: #8fc9d9;
+	border: 0;
+}
+.fb:hover{
+	background-color: rgba(56,79,85,0.3);
+}
+.opt{
+	border:0;
+	background-color: #8fc9d9;
+	width: 200px;
+
+}
+.opt:hover{
+	background-color: rgba(56,79,85,0.3);
+}
+
+
+.button:hover{
+	background-color: rgba(0,54,99,0.3);
+}
+
+/*CR to https://www.w3schools.com/css/css_form.asp*/
+input[type=text] {
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 20px 10px; 
+  line-height: 28px;
+	width: 100%
+
+}
+
+textarea[type=text] {
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 20px 10px; 
+  line-height: 28px;
+	width: 100%
+
+}
+
+#click {
+	display: flex;
+	flex-display: row;
+	justify-content: space-around;
+	width: 80%;
+	margin: auto;
+}
+
+form{
+	margin: 0 auto;
+	width: 70%
+}

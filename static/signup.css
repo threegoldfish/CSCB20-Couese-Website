@@ -1,0 +1,64 @@
+#content{
+  width: 300px;
+  line-height: normal;
+}
+
+#pname{
+  margin-top: 0px;
+}
+
+#identity{
+  width: 300px;
+  margin: 0 auto;
+}
+
+#cname{
+  padding: 0;
+  margin: 0 auto;
+  width: 80%;
+}
+
+form{
+  width: 300px;
+  margin: 0 auto;
+}
+
+option{
+  width: 300px;
+  margin: 0 auto;
+}
+/*Copied from https://stackoverflow.com/questions/23530064/how-to-make-label-and-input-appear-on-the-same-line-on-an-html-form*/
+label {
+    float: left;
+}
+span.form {
+    display: block;
+    overflow: hidden;
+    padding: 0 4px 0 6px;
+}
+input {
+    width: 100%;
+}
+
+.button {
+         border:  solid 1.5px white;
+         padding: 3px;
+         font-size: 16px;
+         margin: 5px;
+}
+
+body {
+  min-height: 0;
+}
+
+#content {
+  min-height: calc(100vh - 30px);
+  margin: 0 auto;
+  padding: 0;
+  border:0;
+}
+
+#login{
+  text-align: center;
+  margin-bottom:  20px;
+}
