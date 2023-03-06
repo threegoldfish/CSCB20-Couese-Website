@@ -1,0 +1,87 @@
+
+<!--choose s(student) or i(instructor) template-->
+{% extends "i_base.html" %}
+
+<!--add specific CSS file-->
+{% block cssFile %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='i_marks.css') }}">
+{% endblock %}
+
+<!--replace ??? with specific title/page name-->
+{% block title %}Marks{% endblock %}
+{% block pname %}MARKS{% endblock %}
+
+<!--add content-->
+{% block content %}
+<!--Assignments-->
+	<div class = "Marks">
+		<div class = "info">
+			<p>Here are the marks of all students.
+			Fill in the form below if you want to add new marks, 
+			note that entering an existing pair of student id and item name 
+			causes the old score value be replaced by the new one.
+			</p>
+		</div>
+		
+		
+		<form action = "/i_marks" method = "POST">
+		<div class = "flextable">
+			<div class="row">
+				<div class="column h">Mark id</div>
+				<div class="column h">Item Name</div>
+				<div class="column h">Score</div>
+				<div class="column h">Student id</div>
+				<div class="column h">Delete</div>
+			</div>
+			{% for mark in marks %}
+			
+				<div class="row">
+					<div class="column">{{mark.mid}}</div>
+					<div class="column">{{mark.item}}</div>
+					<div class="column">{{mark.score}}</div>
+					<div class="column">{{mark.sid}}</div>
+					<div class="column">
+						<input name="MID" style="display: none;" value={{mark.mid}}>
+						<input type="submit" name="{{mark.mid}}" value="Delete Mark No.{{mark.mid}}" />
+					</div>
+				</div>
+			
+			{% endfor %}
+		</div>
+		
+		<p class="message">
+			{% block message %}
+				{% if message != "" %}
+					{{ message }}
+				{% endif %}
+			{% endblock %}
+		</p>
+		
+		
+		<br>
+		<br>
+		<br>
+		
+		<div class = "new_mark">
+			<h2>Insert new mark:<h2>
+				<label for="sid">Student id </label><br>
+				<input type="text" class="fill" name="SID" id="sid" ></input><br>
+				
+				<label for="item">Item Name </label><br>
+				<input type="text" class="fill" name="ITEM" id="item" ></input><br>
+				
+				<label for="score">Score </label><br>
+				<input type="text" class="fill" name="SCORE" id="score" ></input><br>
+				
+				 <div id="click">
+					<input type="reset" value="Reset" class="f_button">
+					<input type="submit" value="Submit" class="f_button">
+				</div>
+		</div>
+		</form>
+		
+		
+		
+	</div>
+	
+{% endblock %}

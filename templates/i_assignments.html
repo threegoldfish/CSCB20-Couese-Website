@@ -1,0 +1,121 @@
+<!--choose s(student) or i(instructor) template-->
+{% extends "i_base.html" %}
+
+<!--add specific CSS file-->
+{% block cssFile %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='assignments.css') }}">
+{% endblock %}
+
+<!--replace ??? with specific title/page name-->
+{% block title %}Assignments{% endblock %}
+{% block pname %}ASSIGNMENTS{% endblock %}
+
+<!--add content-->
+{% block content %}
+<p>Here are the assignment and exercise topics, weights, and due dates. 
+I will be posting the exercise and assignment handouts here.
+All exercises and assignments will be submitted on MarkUs. </p>
+<br><br>
+
+<div class = "assignment">
+			<div class = "info">
+				<div class = "upper">
+					<h3>Assignment 1</h3>
+					
+					<div class = "percent">
+						<p>15%<p>
+					</div>
+				</div>
+				<ul>
+					<li>Topic: Relational Algebra and MySQL </li>
+					<li>Due: Part 1. Wednesday Feb. 1, 11.59pm, Submit to MarkUs
+					UPDATED Part 2 and 3. For 5% bonus Saturday Feb. 11, 11.59pm or Friday Feb. 17, 11.59 Submit to MarkUs <br>
+					You can download a dumpfile for IMDB_SMALL here.<br>
+					To use it type <i>mysql -u utorid -p < IMDB_SMALL.sql</i>
+					</li>
+				</ul>
+				File: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" target="_blank" class="button" id="lfile">Download IMDB_SMALL</a></li>
+				</ul>
+				Solution: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" target="_blank" class="button" id="lfile">Download Solution Part 1</a></li>
+				</ul>
+			</div>
+			
+			<div class = FAQ>
+				<h3>FAQs</h3>
+				<ul>
+					<li>Q. If the mysql portion asks for a director or actor without specifying which attributes, what should I return?<br>
+						A. Return the first name, last name.
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class = "assignment">
+			<div class = "info">
+				<div class = "upper">
+					<h3>Assignment 2</h3>
+					
+					<div class = "percent">
+						<p>15%<p>
+					</div>
+				</div>
+				<ul>
+					<li>Topic: HTML, CSS, PHP</li>
+					<li>Due: Part 1: Worth 50% Friday March. 10, 11.59pm, Submit to MarkUs<br>
+						Part 2: Worth 50% Friday March. 19, 11.59pm, Submit to MarkUs
+					</li>
+				</ul>
+				File: <br>
+				<ul>
+					<li>None</li>
+				</ul>
+				Solution: <br>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+			
+			<div class = FAQ>
+				<h3>FAQs</h3>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class = "assignment">
+			<div class = "info">
+				<div class = "upper">
+					<h3>Assignment 3</h3>
+					
+					<div class = "percent">
+						<p>15%<p>
+					</div>
+				</div>
+				<ul>
+					<li>Topic: Web Application and Database	</li>
+					<li>Due: Friday March 31, 11.59pm </li>
+				</ul>
+				File: <br>
+				<ul>
+					<li>None</li>
+				</ul>
+				Solution: <br>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+			
+			<div class = FAQ>
+				<h3>FAQs</h3>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+		</div>
+
+{% endblock %}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSCB20 - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='common.css') }}">
+    {% block cssFile %}{% endblock %}
+</head>
+
+<body>
+	<div id="header">
+	<!--header: coursename-->
+	<div id="cname">
+		<div id="c">
+			<h1>CSCB20 - Introduction to Databases and Web Applications</h1>
+		</div>
+
+		<div id="LOGOUT" class="tab">
+			<a href="/logout" class="button f" id="logout" > Log out</a>
+		</div>
+	</div>
+
+	<!--header: navBar for students-->
+	<div id="navBar">
+		<div class="tab">
+			<a href="/" class="button">Index</a>
+		</div>
+
+		<div class="tab">
+			<a href="/calendar" class="button">Calendar</a>
+		</div>
+
+		<div class="tab">
+			<a href="/lecNotes" class="button">Lecture Notes</a>
+		</div>
+
+		<div class="tab">
+			<a href="/labs" class="button">Labs</a>
+		</div>
+
+		<div class="tab">
+			<a href="/assignments" class="button">Assignments</a>
+		</div>
+
+		<div class="tab">
+			<a href="/tests" class="button">Tests</a>
+		</div>
+
+		<div class="tab">
+			<a href="/s_marks" class="button">My Marks</a>
+		</div>
+
+		<div class="tab">
+			<a href="/resources" class="button">Resources</a>
+		</div>
+
+		<div class="tab">
+			<a href="/s_feedback" class="button">Anonymous Feedback</a>
+		</div>
+	</div>
+	
+	</div>
+
+	<div id="content">
+		<div id="pname">
+			<h2>{% block pname %}{% endblock %}</h2>
+		</div>
+
+		{% block content%}
+		{% endblock %}
+	</div>
+
+	<!--footer-->
+	<footer id="footer">
+	<div>
+
+	<!--footer: blurb-->
+	<div id="blurb"> 
+		<span class="copyright">&copy;</span> 
+		Site designed by Te Hou & Yuhong Shao
+	</div>
+
+	<!--footer: link to faculty-->
+	<div id="linkToFaculty"><a href="https://web.cs.toronto.edu/" class="linkToFaculty">Link to Faculty of Computer Science at UofT</a>
+	</div>
+	</div>
+	</footer>
+</body>
+</html>

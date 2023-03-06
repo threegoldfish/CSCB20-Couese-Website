@@ -1,0 +1,70 @@
+<!--choose s(student) or i(instructor) template-->
+{% extends "s_base.html" %}
+
+<!--add specific CSS file-->
+{% block cssFile %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='s_feedbacks.css') }}">
+{% endblock %}
+
+<!--replace ??? with specific title/page name-->
+{% block title %}Feedback{% endblock %}
+{% block pname %}FEEDBACK{% endblock %}
+
+<!--add content-->
+{% block content %}
+<div id="fb">
+		<P>
+			Your name and email will NOT be revealed to any instructors. We collect these personal information as a third-party to monitor any inappropriate messages.<br>
+			We encourage you use academic language and avoid single quotation marks in your answer.
+			<br><br>
+		</P>
+
+    <p class="message">
+      {% block message %}
+        {% if message != "" %}
+          {{ message }}
+        {% endif %}
+      {% endblock %}
+    </p>
+		
+    <form action="/s_feedback" method="POST">
+	  		<label for="recipients">This feedback is intended for*</label><br>
+        <select id="recipients" name="recipients" required>
+          <option value="">(blank)</option>
+		  
+          
+          {% for r in recipients %}      
+          <option value="{{ r.username }}">{{r.fname}} {{ r.lname }}</option>
+          {% endfor %}
+
+        </select>
+        <br><br>
+
+	  		<label for="name">Name*</label><br>
+  			<input type="text" class="opt" name="name" required></input><br><br>
+
+  			<label for="email">Email*</label><br>
+  			<input type="text" class="opt" name="email" required></input><br><br>
+
+  			<label for="q1">Q1: What do you like about the instructor teaching?</label><br>
+  			<textarea type="text" class="fb para" name="q1" placeholder="We are here to support. Please be specific to the question, and be respectful to your instructor. Thank you :)"></textarea><br><br>
+
+
+  			<label for="q2">Q2: What do you recommend the instructor to do to improve their teaching?</label><br>
+  			<textarea type="text" class="fb para" name="q2" placeholder="We are here to support. Please be specific to the question, and be respectful to your instructor. Thank you :)"></textarea><br><br>
+
+  			<label for="q3">Q3: What do you like about the labs?</label><br>
+  			<textarea type="text" class="fb para" name="q3" placeholder="We are here to support. Please be specific to the question, and be respectful to your instructor. Thank you :)"></textarea><br><br>
+
+  			<label for="q4">Q4:What do you recommend the lab instructors to do to improve their lab teaching?</label><br>
+  			<textarea type="text" class="fb para" name="q4" placeholder="We are here to support. Please be specific to the question, and be respectful to your instructor. Thank you :)"></textarea><br><br>
+
+      <div id="click">
+        <input type="reset" value="Reset" class="f button">
+        <input type="submit" value="Submit" class="f button">
+      </div>
+ 			
+
+		</form>
+	</div>
+{% endblock %}

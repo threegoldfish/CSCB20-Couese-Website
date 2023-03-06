@@ -1,0 +1,133 @@
+<!--choose s(student) or i(instructor) template-->
+{% extends "i_base.html" %}
+
+<!--add specific CSS file-->
+{% block cssFile %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='labs.css') }}">
+{% endblock %}
+
+<!--replace ??? with specific title/page name-->
+{% block title %}Labs{% endblock %}
+{% block pname %}LABS{% endblock %}
+
+<!--add content-->
+{% block content %}
+<div class = "tutorial">
+				<p> This section contains the tutorial exercises.<br>
+			Tutorials are held every week. The first tutorial week is week 2. 
+			Please make use of this valuable resource! 
+		</p>
+		
+		<div id = "blocks">
+			<div class = "block">
+				<h3>Week 2</h3>
+				File:
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" target="_blank" class="button" id="lfile">Download Python, Command line</a></li>
+				</ul>
+				Solution:
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+				
+			<div class = "block">
+				<h3>Week 3</h3>
+				File: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" target="_blank" class="button" id="lfile">Download Handout</a></li>
+				</ul>
+				Solution: <br>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+			
+			<div class = "block">
+				<h3>Week 4</h3>
+				File: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" target="_blank" class="button" id="lfile">Download Handout</a></li>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" target="_blank" class="button" id="lfile">Download university.sql</a></li>
+				</ul>
+				Solution: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" target="_blank" class="button" id="lfile">Download query_solns</a></li>
+				</ul>
+			</div>
+			
+			<div class = "block">
+				<h3>Week 5</h3>
+				File: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" target="_blank" class="button" id="lfile">Download Handout</a></li>
+				</ul>
+				Solution: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" target="_blank" class="button" id="lfile">Download Solns</a></li>
+				</ul>
+			</div>
+			
+			<div class = "block">
+				<h3>Week 6</h3>
+				File: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" target="_blank" class="button" id="lfile">Download Handout</a></li>
+				</ul>
+				Solution: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" target="_blank" class="button" id="lfile">Download Solns</a></li>
+				</ul>
+			</div>
+			
+			<div class = "block">
+				<h3>Week 7</h3>
+				File: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" target="_blank" class="button" id="lfile">Download Handout</a></li>
+				</ul>
+				Solution: <br>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+			
+			<div class = "block">
+				<h3>Week 8</h3>
+				File: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" target="_blank" class="button" id="lfile">Download Handout</a></li>
+				</ul>
+				Solution: <br>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+			
+			<div class = "block">
+				<h3>Week 9</h3>
+				File: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" target="_blank" class="button" id="lfile">Download Handout</a></li>
+				</ul>
+				Solution: <br>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+			
+			<div class = "block">
+				<h3>Week 10</h3>
+				File: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" target="_blank" class="button" id="lfile">Download Handout</a></li>
+				</ul>
+				Solution: <br>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+{% endblock %}

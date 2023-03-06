@@ -1,0 +1,104 @@
+{% extends "i_base.html" %}
+
+{% block cssFile %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='index.css') }}">
+{% endblock %}
+
+{% block title %}Index{% endblock %}
+{% block pname %}Welcome!{% endblock %}
+
+
+{% block content %}
+<!--Course Info-->
+	<div id="cinfo" >
+
+		<div class="comp" id="c1">
+			<h4>Course Description</h4>
+			<p>A practical introduction to databases and Web app development. Databases: terminology and applications; creating, querying and updating databases; the entity-relationship model for database design. Web documents and applications: static and interactive documents; Web servers and dynamic server-generated content; Web application development and interface with databases.
+			
+			</p>
+		</div>
+
+		<div class="comp" id="c2">
+			<h4>Prerequisite</h4>
+			<p>Some experience with programming in an imperative language such as Python, Java or C. </p>
+
+			<h4>Exculsion</h4>
+			<p>This course may not be taken after - or concurrently with - any C- or D-level CSC course. </p>
+			
+		</div>
+
+		<h4><a href="{{ url_for('static',filename='sample/sample.pdf') }}" target="_blank" class="button" id="syllabus">Download syllabus</a></h4>
+	</div>
+	
+	<!--course team-->
+	<div id="pname">
+			<h2>COURSE TEAM</h2>
+	</div>
+	
+	<div id="cteam">
+
+		<div class="member">
+			<div class="profilePhoto">
+				<img src="{{ url_for('static',filename='profilePhoto/Anna_Bretscher.jpg') }}" alt="Anna Bretscher">
+			</div>
+
+			<div class="profileInfo">
+			<ul>
+				<li><b>Dr. Anna Bretscher</b></li>
+				<li><b>Email: </b><a href="mailto:bretscher@utsc.utoronto.ca" target="_blank">bretscher@utsc.utoronto.ca</a></li>
+				<li><b>Office: </b>IC493</li>
+				<li><b>Phone: </b>(416)208-4745</li>
+				<li><b>Lectures: </b>Mondays 9:10 - 11:00</li>
+				<li><b>Location: </b>SY110</li>
+				<li><b>Office Hours: </b>Monday 11:00 - 12:00</li>
+			</ul>
+			</div>
+		</div>
+
+		<div class="member">
+			<div class="profilePhoto">
+				<img src="{{ url_for('static',filename='profilePhoto/Abbas_Attarwala.png') }}" alt="Abbas Attarwala">
+			</div>
+
+			<div class="profileInfo">
+			<ul>
+				<li><b>Prof. Abbas Attarwala</b></li>
+				<li><b>Email: </b><a href="mailto:abbas.attarwala@utoronto.ca" target="_blank">abbas.attarwala@utoronto.ca</a></li>
+				<li><b>Office: </b>IC349</li>
+				<li><b>Phone: </b>(416)208-5108</li>
+				<li><b>Lectures: </b>Mondays 9:10 - 11:00</li>
+				<li><b>Location: </b>SY110</li>
+				<li><b>Office Hours: </b>Monday 11:00 - 12:00</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!--News-->
+	<div id="news">
+		<div id="pname">
+			<h2>NEWS</h2>
+		</div>
+
+		<div class="post">
+			<div class="postIcon"></div>
+			<div class="postText">
+				<h5>20200106</h5>
+				<p>Welcome to CSCB20</p>
+			</div>
+			
+		</div>
+
+		<div class="post">
+			<div class="postIcon"></div>
+			<div class="postText">
+				<h5>20200113</h5>
+				<p>Midterm is scheduled on March 3th. </p>
+			</div>
+		</div>
+	</div>
+	</div>
+{% endblock %}

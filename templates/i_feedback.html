@@ -1,0 +1,32 @@
+<!--choose s(student) or i(instructor) template-->
+{% extends "i_base.html" %}
+
+<!--add specific CSS file-->
+{% block cssFile %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='XXX.css') }}">
+{% endblock %}
+
+<!--replace ??? with specific title/page name-->
+{% block title %}View Feedbacks{% endblock %}
+{% block pname %}FEEDBACK FOR YOU{% endblock %}
+
+<!--add content-->
+{% block content %}
+ <div class="flextable">
+
+    <div class="row">
+         <div class="column h">Q1: What do you like about the instructor teaching?</div>
+         <div class="column h">Q2: What do you recommend the instructor to do to improve their teaching?</div>
+         <div class="column h">Q3: What do you like about the labs?</div>
+         <div class="column h">Q4: What do you recommend the lab instructors to do to improve their lab teaching?</div>
+    </div>
+    {% for fb in feedbacks %}
+    <div class="row">
+         <div class="column">{{ fb.q1 }}</div>
+         <div class="column">{{ fb.q2 }}</div>
+         <div class="column">{{ fb.q3 }}</div>
+         <div class="column">{{ fb.q4 }}</div>
+    </div>
+    {% endfor %}
+ </div><br><br><br>
+{% endblock %}

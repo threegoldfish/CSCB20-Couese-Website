@@ -1,0 +1,46 @@
+
+<!--choose s(student) or i(instructor) template-->
+{% extends "i_base.html" %}
+
+<!--add specific CSS file-->
+{% block cssFile %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='i_marks.css') }}">
+{% endblock %}
+
+<!--replace ??? with specific title/page name-->
+{% block title %}Remark Requests{% endblock %}
+{% block pname %}PRMARK REQUESTS{% endblock %}
+
+<!--add content-->
+{% block content %}
+<!--Assignments-->
+	<div class = "Remarks">
+		<div class = "info">
+			<p>Below are all the remark request from students.
+			</p>
+		</div>
+		
+		<div class = "flextable">
+			<div class="row">
+				<div class="column h">Remark id</div>
+				<div class="column h">Item Name</div>
+				<div class="column h">Student id</div>
+				<div class="column h">Original Score</div>
+				<div class="column h">Description</div>
+			</div>
+		
+			{% for remark in remarks %}
+				<div class="row">
+					<div class="column">{{remark.rid}}</div>
+					<div class="column">{{marks[remark.mid - 1].item}}</div>
+					<div class="column">{{marks[remark.mid - 1].sid}}</div>
+					<div class="column">{{marks[remark.mid - 1].score}}</div>
+					<div class="column">{{remark.desc}}</div>
+				</div>
+				
+			{% endfor %}
+		</div>
+		
+	</div>
+{% endblock %}
+

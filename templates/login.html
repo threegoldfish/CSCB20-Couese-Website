@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+	<title>CSCB20 - Login</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='common.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='login.css') }}">
+</head>
+<body>
+<div id="content">
+	<h1>CSCB20 - Introduction to Databases and Web Applications</h1><br>
+
+	<!--CR https://blog.csdn.net/kylinxjd/article/details/94563427-->
+	<div id="pname">
+		<h2>Please log in first<br></h2>
+	</div>
+	
+	<p class="message">
+		{% block error %}
+			{{ error }}
+		{% endblock%}
+	</p>
+
+		<div id="frm">
+			<form method="post">
+	  		<label for="username">Username* </label><br>
+	  		<span class="form"><input type="text" id="username" name="username" required></span><br>
+
+	  		<label for="password">Password* </label><br>
+	  		<span class="form"><input type="password" id="password" name="password" required></span><br>
+
+	  		<input type="submit" value="Log in" class="f button" id="login">
+			</form>		
+		</div>
+
+		<div id="signup">
+			<a href="signup">Not a user? Sign up first!</a><br>
+		</div>
+</div>
+ <!--footer-->
+<footer id="footer">
+<div>
+	<!--footer: blurb-->
+	<div id="blurb"> 
+		<span class="copyright">&copy;</span> 
+		Site designed by Te Hou & Yuhong Shao
+	</div>
+
+	<!--footer: link to faculty-->
+	<div id="linkToFaculty">
+		<a href="https://web.cs.toronto.edu/" class="linkToFaculty">Link to Faculty of Computer Science at UofT</a>
+	</div>
+</div>
+</footer>
+ 	
+</body>
+</html>

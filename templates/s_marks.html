@@ -1,0 +1,69 @@
+<!--choose s(student) or i(instructor) template-->
+{% extends "s_base.html" %}
+
+<!--add specific CSS file-->
+{% block cssFile %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='s_marks.css') }}">
+{% endblock %}
+
+<!--replace ??? with specific title/page name-->
+{% block title %}Marks{% endblock %}
+{% block pname %}MARKS{% endblock %}
+
+<!--add content-->
+{% block content %}
+<!--Assignments-->
+	<div class = "Marks">
+		<div class = "info">
+			<p>Below are your marks. If you have any question, please fill in the
+			remark form beside and click submit.<br>
+			We encourage you use academic language and avoid single quotation marks in your answer.<br>
+			</p>
+		</div>
+		
+		<p class="message">
+			{% block message %}
+				{% if message != "" %}
+					{{ message }}
+				{% endif %}
+			{% endblock %}
+		</p>
+		
+		<div class = "flextable">
+			<div class="row">
+				<div class="column h">Mark id</div>
+				<div class="column h">Item Name</div>
+				<div class="column h">Score</div>
+				<div class="column h">Remark</div>
+			</div>
+			
+			{% for mark in marks %}
+			<div class="row" >
+				<div class="column">{{mark.mid}}</div>
+				<div class="column">{{mark.item}}</div>
+				<div class="column">{{mark.score}}</div>
+				<div class="column">
+						<form class="remark" action = "/s_marks" method = "POST">
+							<input name="mid" style="display: none;" value={{mark.mid}}>
+							
+							<label for="DESC">Description* </label><br>
+							<textarea name="DESC"  type="text" class="desc para">
+							</textarea>
+				
+							<div id="click">
+								<input type="reset" value="Reset" class="f_button">
+								<input type="submit" value="Submit" class="f_button">
+							</div>
+						</form>
+				</div>
+			</div>
+			
+			{% endfor %}
+			
+		</div>
+		
+		
+		
+	</div>
+{% endblock %}
+

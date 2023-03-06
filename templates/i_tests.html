@@ -1,0 +1,82 @@
+<!--choose s(student) or i(instructor) template-->
+{% extends "i_base.html" %}
+
+<!--add specific CSS file-->
+{% block cssFile %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='tests.css') }}">
+{% endblock %}
+
+<!--replace ??? with specific title/page name-->
+{% block title %}Tests{% endblock %}
+{% block pname %}TESTS{% endblock %}
+
+<!--add content-->
+{% block content %}
+<!--Assignments-->
+		<div class = "test">
+			<div class = "info">
+				<div class = "upper">
+					<h3>Midterm</h3>
+					
+					<div class = "percent">
+						<p>15%<p>
+					</div>
+				</div>
+				<p>There will be one midterm. The midterm will be 75min in length.<br>
+				You should go to either HW215 or HW216 depending on your last name as shown below. 
+				</p>
+				
+				File:
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" target="_blank" class="button" id="lfile">Download Term Test</a></li>
+				</ul>
+				Solution:
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+			
+			<div class = "prepare">
+				<h3>Prepare</h3>
+				<ul>
+					<li>Understand all parts of A1.</li>
+					<li>The midterm will cover everything on databases that we did from the start until part way through the week 6 lecture.</li>
+				</ul>
+				<p>Once you have done some preparation, you can practice on a previous midterm.</p>
+			</div>
+			
+			<div class = "arrange">
+				<img src="{{ url_for('static',filename='profilePhoto/B20_rooms.jpg') }}" width = "100%" alt="Midterm Arrangement">
+			</div>
+		</div>
+		
+		<div class = "test">
+			<div class = "info">
+				<div class = "upper">
+					<h3>Final</h3>
+					
+					<div class = "percent">
+						<p>40%<p>
+					</div>
+				</div>
+				<p>
+				</p>
+				
+				File:
+				<ul>
+					<li>None</li>
+				</ul>
+				Solution:
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+			
+			<div class = "prepare">
+				<h3>Prepare</h3>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+		</div>
+{% endblock %}

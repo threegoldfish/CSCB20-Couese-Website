@@ -1,0 +1,188 @@
+<!--choose s(student) or i(instructor) template-->
+{% extends "s_base.html" %}
+
+<!--add specific CSS file-->
+{% block cssFile %}
+	<link rel="stylesheet" type="text/css" href="../static/lecNotes.css">
+{% endblock %}
+
+<!--replace ??? with specific title/page name-->
+{% block title %}Lecture Notes{% endblock %}
+{% block pname %}LECTURE NOTES{% endblock %}
+
+<!--add content-->
+{% block content %}
+<!--Lecture Materials-->
+	<div id="lec">
+		<div id="note">
+			
+			<p>Please print and bring these notes/worksheets to class.</p>
+		</div>
+
+		<div class="flex-container">
+			<div class="child">
+				<h3>Week 1</h3>
+				Topic: Introduction, Databases background<br><br>
+				Lecture Material: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pptx') }}" class="button week"> W1 PPT</a></li>
+					<li><a href="{{ url_for('static',filename='sample/sample.docx') }}" class="button week">W1 Handout</a></li>
+				</ul>
+				In Class: <br>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+
+			<div class="child">
+				<h3>Week 2</h3>
+				Same as Week1
+			</div>
+
+			<div class="child">
+				<h3>Week 3</h3>
+				Topic: Schema Diagrams, Relational Algebra<br><br>
+				Lecture Material: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pptx') }}" class="button week">W3 PPT</a></li>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" class="button week">W3 Worksheet</a></li>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" class="button week">W3 Worksheet Solution</a></li>
+				</ul>
+				In Class: <br>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+
+			<div class="child">
+				<h3>Week 4</h3>
+				Topic: SQL and MySQL<br><br>
+				Lecture Material: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pptx') }}" class="button week">W4 PPT</a></li>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" class="button week">W4 PPT PDF</a></li>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" class="button week">W4 Printable PDF</a></li>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" class="button week">W4 My SQL Worksheet</a></li>
+				</ul>
+				In Class: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.docx') }}" class="button week">W4 In Class MySQL</a></li>
+				</ul>
+			</div>
+
+			<div class="child">
+				<h3>Week 5</h3>
+				Topic: MySQL Queries, Creating and Editing Tables<br><br>
+				Lecture Material: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pptx') }}" class="button week">W5 PPT</a></li>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" class="button week">W5 Printable PPT</a></li>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" class="button week">W5 Printable PPT</a></li>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" class="button week">W5 More MySQL Worksheet</a></li>
+					<li class="Solution"><a href="{{ url_for('static',filename='sample/sample.pdf') }}"class="button week">W5 Solution</a></li>
+				</ul>
+				In Class: <br>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+
+			<div class="child">
+				<h3>Week 6</h3>
+				Topic: MySQL Outer Joins, Views, NULL, string functions, HTML<br><br>
+				Lecture Material: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pptx') }}" class="button week">W6 PPT</a></li>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" class="button week">W6 HTML PPT</a></li>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" class="button week">W6 MySQL Views Worksheet</a></li>
+					<li class="Solution"><a href="{{ url_for('static',filename='sample/sample.pdf') }}" class="button week">W6 Solution</a></li>
+				</ul>
+				In Class: <br>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+
+			<div class="child">
+				<h3>Week 7</h3>
+				Topic: HTML, CSS<br><br>
+				Lecture Material: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pptx') }}" class="button week">W7 PPT</a></li>
+				</ul>
+				In Class: <br>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+
+			<div class="child">
+				<h3>Week 8</h3>
+				Topic: PHP<br><br>
+				Lecture Material: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pptx') }}" class="button week">W8 PPT</a></li>
+				</ul>
+				In Class: <br>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+
+			<div class="child">
+				<h3>Week 9</h3>
+				Topic: PHP and SQL<br><br>
+				Lecture Material: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pptx') }}" class="button week">W9 PPT</a></li>
+				</ul>
+				In Class: <br>
+				<ul>
+					<li>Empty starter code: <a href="{{ url_for('static',filename='sample/sample.txt') }}" class="button week">W9 query.php</a></li>
+					<li>To look at the txt for this file, download this <a href="{{ url_for('static',filename='sample/sample.txt') }}" class="button week">W9 php_query.txt</a></li>
+				</ul>
+			</div>
+
+			<div class="child">
+				<h3>Week 10</h3>
+				Topic: JavaScript and jQuery<br><br>
+				Lecture Material: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pptx') }}" class="button week">W10 jQuery PPT</a></li>
+				</ul>
+				In Class: <br>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+
+			<div class="child">
+				<h3>Week 11</h3>
+				Topic: jQuery, AJAX, JSON<br><br>
+				Lecture Material: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pptx') }}" class="button week">W11 PPT</a></li>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" class="button week">W11 Printable PPT</a></li>
+				</ul>
+				In Class: <br>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+
+			<div class="child">
+				<h3>Week 12</h3>
+				Topic: Last Year's Final<br><br>
+				Lecture Material: <br>
+				<ul>
+					<li><a href="{{ url_for('static',filename='sample/sample.pdf') }}" class="button week">WINTER16 Final</a> <br> Note that some questions have code missing because portions resemble your A3</li>
+				</ul>
+				In Class: <br>
+				<ul>
+					<li>None</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+{% endblock %}
